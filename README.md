@@ -1,5 +1,7 @@
 # Compile RISCV binary and run on BOOM
 
+The tool and instruction is borrow from the official riscv-tests [repo](https://github.com/riscv-software-src/riscv-tests). 
+
 ## Precondition: Step up riscv toolchain
 Follow the chipyard setup guide in another repo.
 
