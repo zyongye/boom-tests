@@ -5,6 +5,14 @@ The tool and instruction is borrow from the official riscv-tests [repo](https://
 ## Precondition: Step up riscv toolchain
 Follow the chipyard setup guide in another repo.
 
+## Generate testcase 
+```
+cd case_generation
+python3 test_case_generation.py
+cd ../isa/rv64ui
+make
+```
+
 ## Steps: 
 1. Use ```simple.S``` as a skeleton. Thw testcode can be write at the section between ```RVTEST_CODE_BEGIN``` and ```RVTEST_PASS```. 
 
