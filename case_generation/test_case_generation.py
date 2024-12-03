@@ -1,5 +1,6 @@
 import os
 import copy
+import sys
 
 import test_case_template
 
@@ -92,10 +93,13 @@ MEM_INST = [
     "sw",
 ]
 
-
-parent_dir = "../"
-directory = "isa/rv64ui/"
-test_dir = parent_dir + directory
+# First argument is target dir, otherwise the default is ../isa/rv64ui/
+if len(sys.argv) > 1:
+    test_dir = sys.argv[1]
+else:
+    parent_dir = "../"
+    directory = "isa/rv64ui/"
+    test_dir = parent_dir + directory
 
 def write_to_file(file, content: str):
     with open(file, "w") as f:
