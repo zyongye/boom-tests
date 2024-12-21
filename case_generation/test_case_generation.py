@@ -133,7 +133,7 @@ def generate_alu_i():
         os.makedirs(inst_dir, exist_ok=True)
         write_to_file(test_dir + inst + "/Makefile", build_makefile(inst=inst))
         write_to_file(f"{inst_dir}/{inst}-1.S", build_alu_i_tests(inst, "0xdad", "0x212"))
-        write_to_file(f"{inst_dir}/{inst}-2.S", build_alu_i_tests(inst, "0xdad", "0x332"))
+        write_to_file(f"{inst_dir}/{inst}-2.S", build_alu_i_tests(inst, "0xdad", "0x212"))
 
 def generate_sft_r():
     def build_sft_r_tests(opcode, value1, value2):
@@ -157,7 +157,7 @@ def generate_sft_i():
         os.makedirs(inst_dir, exist_ok=True)
         write_to_file(test_dir + inst + "/Makefile", build_makefile(inst=inst))
         write_to_file(f"{inst_dir}/{inst}-1.S", build_sft_i_tests(inst, "0xdad", "0x3"))
-        write_to_file(f"{inst_dir}/{inst}-2.S", build_sft_i_tests(inst, "0xdad", "0x2"))
+        write_to_file(f"{inst_dir}/{inst}-2.S", build_sft_i_tests(inst, "0xdad", "0x3"))
 
 def generate_load_i():
     def build_load_i_tests(opcode, imm):
@@ -169,7 +169,7 @@ def generate_load_i():
         os.makedirs(inst_dir, exist_ok=True)
         write_to_file(test_dir + inst + "/Makefile", build_makefile(inst=inst))
         write_to_file(f"{inst_dir}/{inst}-1.S", build_load_i_tests(inst, "0x3"))
-        write_to_file(f"{inst_dir}/{inst}-2.S", build_load_i_tests(inst, "0x2"))
+        write_to_file(f"{inst_dir}/{inst}-2.S", build_load_i_tests(inst, "0x3"))
 
 def generate_cmp_r():
     def build_cmp_r_tests(opcode, value1, value2):
@@ -194,7 +194,7 @@ def generate_cmp_i():
         os.makedirs(inst_dir, exist_ok=True)
         write_to_file(test_dir + inst + "/Makefile", build_makefile(inst=inst))
         write_to_file(f"{inst_dir}/{inst}-1.S", build_cmp_i_tests(inst, "0xd", "0xf"))
-        write_to_file(f"{inst_dir}/{inst}-2.S", build_cmp_i_tests(inst, "0xd", "0x2"))
+        write_to_file(f"{inst_dir}/{inst}-2.S", build_cmp_i_tests(inst, "0xd", "0xf"))
 
 def generate_br():
     def build_br_tests(opcode, value1, value2):
